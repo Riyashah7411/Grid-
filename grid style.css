@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+.body{
+    height: 100%;
+    width: 100%;
+
+}
+.container{
+
+    height: 100%;
+    width: 100%;
+    background-color: palegreen;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(5,175px);
+    gap: 1rem;
+    border: 5px solid black;
+    padding: 20px;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-columns: repeat(1,1fr);
+    /* justify-items: stretch; */
+    /* justify-items: start; */
+    /* align-items: stretch; */
+    /* place-items: center; */
+    
+
+    
+    
+}
+.item{
+   
+    background-color: pink;
+    border: 5px solid whitesmoke;
+    /* justify-self: end; */ /* for row horizontal*/
+    /* justify-self: stretch; */
+    /* align-self: center ; */  /* for vertical*/
+    /* place-self: center;  both in center */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width:640px){
+    .container{
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: repeat(5,175px);
+    }
+    .First{
+        grid-column-start: 1;
+        grid-column-end: 3;
+    
+    
+    }
+    .Seventh{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 5;
+    
+    
+    }
+    .Eleventh{
+        /* grid-column-start: 1;
+        grid-column-end: 4; */
+        grid-column: 1/4;
+    }
+    .Tenth{
+        grid-column:4/5;
+        grid-row: 3/4;
+    }
+    .Eight{
+        grid-row: 3/4;
+        grid-column: 3/4;
+    }
+    .Nineth{
+        grid-column: 3/4;
+        grid-row: 4/5;
+    }
+
+}
